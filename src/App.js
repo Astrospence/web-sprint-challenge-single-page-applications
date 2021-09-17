@@ -1,11 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch, } from 'react-router-dom';
+import axios from 'axios';
 import Home from './Home';
 import OrderForm from './OrderForm';
 
-const App = () => {
+const initialFormValues = {
+  name: '',
+  size: '',
+  sauce: '',
+  pepperoni: false,
+  bacon: false,
+  canadianBacon: false,
+  sausage: false,
+  chicken: false,
+  onions: false,
+  spinach: false,
+  artichokeHearts: false,
+  special: ''
+}
 
-  
+const initialFormErrors = {
+  name: ''
+}
+
+const initialDisabled = true
+
+const App = () => {
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const [formErrors, setFormErrors] = useState(initialFormErrors);
+  const [disabled, setDisabled] = useState(initialDisabled);
+
+  const inputChange = (name, value) => {
+    setFormValues({ ...formValues, [name]: value})
+  }
+
+  const orderSubmit = () => {
+    const newOrder = {
+      name: formValues.name,
+      size: formValues.size,
+      sauce: formValues.sauce,
+      toppings: ['original', 'alfredo', 'garlic', 'bbq'].filter(top => !!formValues[top]),
+      special: formValues.special
+    }
+  }
 
   return (
     <div className="App">
@@ -14,7 +51,13 @@ const App = () => {
 
         <Switch>
           <Route path="/pizza">
-            <OrderForm />
+            <OrderForm 
+              values={formValues}
+              submit={orderSubmit}
+              disabled={disabled}
+              change={inputChange}
+              errors={formErrors}
+            />
           </Route>
           <Route path="/">
             <Home />

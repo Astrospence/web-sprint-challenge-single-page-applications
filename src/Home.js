@@ -1,10 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 export default function Home(props) {
 
     const history = useHistory();
-    
+
     const routeToOrder = () => {
         history.push('/pizza')
     }

@@ -176,7 +176,7 @@ export default function OrderForm(props) {
                 <label>Enter any special instructions here&nbsp;&nbsp;
                     <input
                         type="text"
-                        name="instructions"
+                        name="special"
                         value={values.instructions}
                         onChange={onChange}
                     />

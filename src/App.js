@@ -1,3 +1,4 @@
+import './App.css';
 import React, { useState, useEffect } from "react";
 import { Route, Switch, } from 'react-router-dom';
 import axios from 'axios';
@@ -85,8 +86,10 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className="header">
         <h1 className="title">LAMBDA EATS PIZZAHOLICS ANONYMOUS</h1>
         <p>We're all in this together...but pizzaholism is not a problem that needs fixing. Have as much as you want!</p>
+      </div>
 
         <Switch>
           <Route path="/pizza">

@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  background-color: rgb(190, 76, 0);
+  padding: 1%;
+}
+
+.form {
+  margin: 3% 25% 1%;
+}
+
+.banners {
+  background-color:rgba(190, 76, 0, 0.473);
+  padding: 0.1%;
+  margin: 2% 0 2%;
+}
+
+.sauce-choices {
+  display: flex;
+  flex-direction: column;
+}
+
+.topping-choices {
+  display: flex;
+  flex-direction: column;
+}
+
+.special {
+  margin-bottom: 3%;
+}

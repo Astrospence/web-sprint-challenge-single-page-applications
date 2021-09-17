@@ -19,11 +19,11 @@ export default function OrderForm(props) {
     }
 
     return (
-        <form id="pizza-form" onSubmit={onSubmit}>
+        <form id="pizza-form" className="form" onSubmit={onSubmit}>
 
             <h2>Customize Your Pizza</h2>
 
-            <div>
+            <div className="banners">
                 <h3>Who have we the honor of serving?</h3>
             </div>
 
@@ -40,7 +40,7 @@ export default function OrderForm(props) {
                 <div>{errors.name}</div>
             </div>
 
-            <div>
+            <div className="banners">
                 <h3>Pizza Size</h3>
             </div>
 
@@ -58,7 +58,7 @@ export default function OrderForm(props) {
                 </select>
             </div>
 
-            <div>
+            <div className="banners">
                 <h3>Sauce</h3>
             </div>
 
@@ -101,7 +101,7 @@ export default function OrderForm(props) {
                 </label>
             </div>
 
-            <div>
+            <div className="banners">
                 <h3>Toppings</h3>
             </div>
 
@@ -190,7 +190,7 @@ export default function OrderForm(props) {
                 </label>
             </div>
 
-            <div>
+            <div className="banners">
                 <h3>Special Instructions</h3>
             </div>
 

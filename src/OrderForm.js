@@ -14,6 +14,10 @@ export default function OrderForm(props) {
         change(name, valueToUse);
     }
 
+    const orderConfirmation = () => {
+
+    }
+
     return (
         <form id="pizza-form" onSubmit={onSubmit}>
 

@@ -38,6 +38,7 @@ const App = () => {
       .then(res => {
         alert(`Your Order is on its way, ${res.data.name}! Size: ${res.data.size}, Sauce: ${res.data.sauce}, Toppings: ${res.data.toppings.map(item => item)}`);
         setFormValues(initialFormValues);
+        return res.data;
       })
       .catch(err => {
         console.error(err);

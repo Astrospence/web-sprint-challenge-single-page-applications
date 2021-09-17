@@ -109,6 +109,7 @@ export default function OrderForm(props) {
                         name="cheese"
                         checked={values.cheese}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Pepperoni
@@ -117,6 +118,7 @@ export default function OrderForm(props) {
                         name="pepperoni"
                         checked={values.pepperoni}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Bacon
@@ -125,6 +127,7 @@ export default function OrderForm(props) {
                         name="bacon"
                         checked={values.bacon}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Canadian Bacon
@@ -133,6 +136,7 @@ export default function OrderForm(props) {
                         name="canadianBacon"
                         checked={values.canadianBacon}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Sausage
@@ -141,6 +145,7 @@ export default function OrderForm(props) {
                         name="sausage"
                         checked={values.sausage}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Chicken
@@ -149,6 +154,7 @@ export default function OrderForm(props) {
                         name="chicken"
                         checked={values.chicken}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Onions
@@ -157,6 +163,7 @@ export default function OrderForm(props) {
                         name="onions"
                         checked={values.onions}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Spinach
@@ -165,6 +172,7 @@ export default function OrderForm(props) {
                         name="spinach"
                         checked={values.spinach}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
                 <label>Artichoke Hearts
@@ -173,6 +181,7 @@ export default function OrderForm(props) {
                         name="artichokeHearts"
                         checked={values.artichokehearts}
                         onChange={onChange}
+                        data-cy="toppings"
                     />
                 </label>
             </div>

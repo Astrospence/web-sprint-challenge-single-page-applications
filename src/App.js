@@ -29,17 +29,25 @@ const initialFormErrors = {
 
 const initialDisabled = true
 
+const initialOrders = {
+  name: '',
+  size: '',
+  sauce: '',
+  toppings: [],
+}
+
 const App = () => {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [formErrors, setFormErrors] = useState(initialFormErrors);
   const [disabled, setDisabled] = useState(initialDisabled);
+  const [orders, setOrders] = useState(initialOrders);
 
   const postNewOrder = newOrder => {
     axios.post('https://reqres.in/api/orders', newOrder)
       .then(res => {
-        alert(`Your Order is on its way, ${res.data.name}! Size: ${res.data.size}, Sauce: ${res.data.sauce}, Toppings: ${res.data.toppings.map(item => item)}`);
         setFormValues(initialFormValues);
-        return res.data;
+        setOrders(res.data);
+        console.log(orders);
       })
       .catch(err => {
         console.error(err);

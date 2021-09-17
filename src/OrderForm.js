@@ -10,14 +10,12 @@ export default function OrderForm(props) {
             </div>
 
             <div className="size-choices">
-                <label>Select your size&nbsp;&nbsp;
-                    <select id="size-dropdown">
-                        <option value="">-select-</option>
-                        <option value="large">Large</option>
-                        <option value="huge">Huge</option>
-                        <option value="gargantuan">Gargantuan</option>
-                    </select>
-                </label>
+                <select id="size-dropdown">
+                    <option value="">-select-</option>
+                    <option value="large">Large</option>
+                    <option value="huge">Huge</option>
+                    <option value="gargantuan">Gargantuan</option>
+                </select>
             </div>
 
             <div>
@@ -107,6 +105,19 @@ export default function OrderForm(props) {
                     <input
                         type="checkbox"
                         name="artichokeHearts"
+                    />
+                </label>
+            </div>
+
+            <div>
+                <h3>Special Instructions</h3>
+            </div>
+
+            <div>
+                <label>Enter any special instructions here&nbsp;&nbsp;
+                    <input
+                        type="text"
+                        name="instructions"
                     />
                 </label>
             </div>

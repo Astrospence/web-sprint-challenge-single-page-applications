@@ -1,11 +1,26 @@
 import React from "react";
+import { Route, Switch, } from 'react-router-dom';
+import Home from './Home';
+import OrderForm from './OrderForm';
 
 const App = () => {
+
+  
+
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div className="App">
+        <h1 className="title">LAMBDA EATS PIZZAHOLICS ANONYMOUS</h1>
+        <p>We're all in this together...but pizzaholism is not a problem that needs fixing. Have as much as you want!</p>
+
+        <Switch>
+          <Route path="/pizza">
+            <OrderForm />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+    </div>
   );
 };
 export default App;

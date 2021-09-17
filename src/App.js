@@ -3,6 +3,7 @@ import { Route, Switch, } from 'react-router-dom';
 import axios from 'axios';
 import Home from './Home';
 import OrderForm from './OrderForm';
+import schema from './formSchema';
 
 const initialFormValues = {
   name: '',
@@ -32,7 +33,8 @@ const App = () => {
   const [disabled, setDisabled] = useState(initialDisabled);
 
   const inputChange = (name, value) => {
-    setFormValues({ ...formValues, [name]: value})
+    validate(name, value);
+    setFormValues({ ...formValues, [name]: value});
   }
 
   const orderSubmit = () => {
@@ -43,6 +45,13 @@ const App = () => {
       toppings: ['original', 'alfredo', 'garlic', 'bbq'].filter(top => !!formValues[top]),
       special: formValues.special
     }
+  }
+
+  const validate = (name, value) => {
+    yup.reach(schema, name)
+      .validate(value)
+      .then(() => setFormErrors({ ...formErrors, [name]: ''}))
+      .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0]}));
   }
 
   return (

@@ -101,7 +101,7 @@ export default function OrderForm(props) {
                 <h3>Toppings</h3>
             </div>
 
-            <div>
+            <div className="topping-choices">
                 <h4>Choose up to 4 options (cheese is already included)</h4>
                 <label>Extra cheese
                     <input
@@ -181,9 +181,10 @@ export default function OrderForm(props) {
                 <h3>Special Instructions</h3>
             </div>
 
-            <div>
+            <div className="special">
                 <label>Enter any special instructions here&nbsp;&nbsp;
                     <input
+                        id="special-text"
                         type="text"
                         name="special"
                         value={values.instructions}

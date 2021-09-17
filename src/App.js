@@ -8,6 +8,7 @@ const initialFormValues = {
   name: '',
   size: '',
   sauce: '',
+  cheese: false,
   pepperoni: false,
   bacon: false,
   canadianBacon: false,

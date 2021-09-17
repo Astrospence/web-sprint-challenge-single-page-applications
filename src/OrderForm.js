@@ -33,6 +33,7 @@ export default function OrderForm(props) {
                         onChange={onChange}
                     />
                 </label>
+                <div>{errors.name}</div>
             </div>
 
             <div>
@@ -63,7 +64,7 @@ export default function OrderForm(props) {
                         type="radio"
                         name="sauce"
                         value="original"
-                        checked={values.sauce}
+                        checked={values.sauce === 'original'}
                         onChange={onChange}
                     />
                 </label>
@@ -72,7 +73,7 @@ export default function OrderForm(props) {
                         type="radio"
                         name="sauce"
                         value="alfredo"
-                        checked={values.sauce}
+                        checked={values.sauce === 'alfredo'}
                         onChange={onChange}
                     />
                 </label>
@@ -81,7 +82,7 @@ export default function OrderForm(props) {
                         type="radio"
                         name="sauce"
                         value="garlic"
-                        checked={values.sauce}
+                        checked={values.sauce === 'garlic'}
                         onChange={onChange}
                     />
                 </label>
@@ -90,7 +91,7 @@ export default function OrderForm(props) {
                         type="radio"
                         name="sauce"
                         value="bbq"
-                        checked={values.sauce}
+                        checked={values.sauce === 'bbq'}
                         onChange={onChange}
                     />
                 </label>
@@ -102,6 +103,14 @@ export default function OrderForm(props) {
 
             <div>
                 <h4>Choose up to 4 options (cheese is already included)</h4>
+                <label>Extra cheese
+                    <input
+                        type="checkbox"
+                        name="cheese"
+                        checked={values.cheese}
+                        onChange={onChange}
+                    />
+                </label>
                 <label>Pepperoni
                     <input
                         type="checkbox"
